@@ -16,8 +16,9 @@ const bootLines = [
 const roles = ["Full Stack Engineer", "AI Engineer", "Systems Architect", "Open Source Contributor"];
 
 export function Hero() {
-  const [visibleLines, setVisibleLines] = useState(0);
-  const [bootDone, setBootDone] = useState(false);
+  const alreadyBooted = typeof window !== "undefined" && sessionStorage.getItem("booted") === "1";
+  const [visibleLines, setVisibleLines] = useState(alreadyBooted ? bootLines.length : 0);
+  const [bootDone, setBootDone] = useState(alreadyBooted);
   const [roleIndex, setRoleIndex] = useState(0);
 
   const advanceBoot = useCallback(() => {
@@ -25,16 +26,20 @@ export function Hero() {
       setTimeout(() => {
         setVisibleLines(i + 1);
         if (i === bootLines.length - 1) {
-          setTimeout(() => setBootDone(true), 600);
+          setTimeout(() => {
+            setBootDone(true);
+            sessionStorage.setItem("booted", "1");
+          }, 600);
         }
       }, bootLines[i].delay);
     });
   }, []);
 
   useEffect(() => {
+    if (alreadyBooted) return;
     const timer = setTimeout(advanceBoot, 300);
     return () => clearTimeout(timer);
-  }, [advanceBoot]);
+  }, [advanceBoot, alreadyBooted]);
 
   useEffect(() => {
     if (!bootDone) return;
