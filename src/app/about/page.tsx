@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 const ExperienceTimeline = dynamic(() => import("@/components/experience/experience-timeline").then((m) => m.ExperienceTimeline));
@@ -15,7 +16,11 @@ export default function AboutPage() {
   return (
     <div className="pt-24 pb-16">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="mb-20">
+        <div className="mb-20 flex flex-col md:flex-row gap-10 items-start">
+          <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-2xl overflow-hidden border-2 border-[var(--color-border)] ring-4 ring-[var(--color-accent)]/10 shrink-0">
+            <Image src="/picofme.png" alt="Rakshit Sisodiya" fill className="object-cover" priority />
+          </div>
+          <div>
           <p className="text-xs font-mono text-[var(--color-accent)] mb-2">// about</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About Me</h1>
           <div className="max-w-2xl space-y-4 text-[var(--color-text-dim)] leading-relaxed">
@@ -34,6 +39,7 @@ export default function AboutPage() {
               <span className="text-white font-medium">Microsoft&apos;s DeepSpeed</span> — and compete
               in algorithmic programming (LeetCode Top 6.5%, CodeChef Top 1%).
             </p>
+          </div>
           </div>
         </div>
 

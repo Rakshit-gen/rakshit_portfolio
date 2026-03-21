@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 const bootLines = [
@@ -93,6 +94,19 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
+              {/* Profile image */}
+              <div className="mb-8">
+                <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-[var(--color-border)] ring-4 ring-[var(--color-accent)]/10">
+                  <Image
+                    src="/picofme.png"
+                    alt="Rakshit Sisodiya"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+
               {/* Status badge */}
               <div className="flex items-center gap-2 mb-6">
                 <span className="w-2 h-2 rounded-full bg-[var(--color-success)] animate-pulse" />
