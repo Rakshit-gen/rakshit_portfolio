@@ -11,30 +11,21 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     company: "HSV Digital",
-    role: "AI Backend Engineer",
+    role: "Backend Engineer",
     period: "Dec 2025 — Present",
-    location: "Gurugram, Haryana",
+    location: "Remote",
     description:
-      "Built scalable LLM inference APIs powering an AI-driven interview platform used by 500+ recruiters. Migrated legacy evaluation system to a rubric-first approach, improving assessment consistency by 40%.",
-    skills: ["Nest.js", "Python", "AWS", "ElevenLabs", "CI/CD"],
+      "Built multi-tenant Rubrics System end-to-end for enterprise customers like Ingram Micro. Reduced NestJS API cold-start from 45s to 3s (93%). Implemented multi-level manager hierarchy with junction-table architecture. Shipped 6+ analytics BFF endpoints replacing ad-hoc frontend transformations across 30+ components.",
+    skills: ["TypeScript", "Node.js", "NestJS", "AWS", "PostgreSQL", "Redis", "BullMQ"],
     current: true,
   },
   {
-    company: "Wayground",
+    company: "Quizizz (Wayground)",
     role: "Software Engineer",
-    period: "Aug 2024 — Nov 2024",
+    period: "Jan 2025 — Oct 2025",
     location: "Bengaluru, Karnataka",
     description:
-      "Built scalable backends, optimized APIs, and contributed to frontend features. Streamlined deployments with cloud and CI/CD.",
-    skills: ["Go", "TypeScript", "AWS", "PostgreSQL"],
-  },
-  {
-    company: "Mood Analytica",
-    role: "Software Development Intern",
-    period: "May 2024 — Jul 2024",
-    location: "Remote",
-    description:
-      "Developed data-driven features, optimized backends, and built APIs to support analytics workflows.",
-    skills: ["Python", "FastAPI", "React", "PostgreSQL"],
+      "Engineered Go/Python microservices improving quiz throughput 42% for 1M+ daily quizzes. Optimized ElasticSearch over 10M+ records cutting p95 latency 78% to <280ms. Deployed 25+ containerized services on AWS EKS with GitHub Actions CI/CD, reducing DB load 85%.",
+    skills: ["Go", "Python", "Vue.js", "GraphQL", "AWS", "ElasticSearch", "Redis", "Docker"],
   },
 ];

@@ -4,12 +4,12 @@ export const competitiveProgramming = [
 ];
 
 export const impactMetrics = [
-  { label: "Throughput Boost", value: "42%", description: "via pipelining & async orchestration" },
-  { label: "Query Optimization", value: "99.8%", description: "PostgreSQL performance on 1M+ rows" },
-  { label: "Deployment Speed", value: "63%", description: "improvement with CI/CD automation" },
-  { label: "Search Latency", value: "280ms", description: "from 1.3s via ElasticSearch" },
-  { label: "API Performance", value: "<200ms", description: "at 10K+ daily requests" },
-  { label: "Inference Speed", value: "6s", description: "multi-agent, 30+ reasoning steps" },
+  { label: "Cold Start", value: "93%", description: "NestJS API cold-start reduced from 45s to 3s" },
+  { label: "Throughput", value: "42%", description: "quiz throughput boost via Redis async pipelining" },
+  { label: "Search Latency", value: "78%", description: "p95 cut to <280ms on 10M+ records (ElasticSearch)" },
+  { label: "DB Load", value: "85%", description: "reduction via multi-tier Redis caching (L1/L2)" },
+  { label: "RAM Usage", value: "85%", description: "1.2GB → 180MB via Redis pooling & chunked streaming" },
+  { label: "Gateway", value: "10K", description: "req/min with 99.99% uptime under burst traffic" },
 ];
 
 export const openSourceContributions = [
