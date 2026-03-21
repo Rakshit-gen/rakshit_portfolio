@@ -105,6 +105,11 @@ body {
   transform-style: preserve-3d;
 }
 
+/* Safe area for mobile bottom input */
+.safe-bottom {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
 .hero-image-wrapper {
   perspective: 800px;
   transform-style: preserve-3d;

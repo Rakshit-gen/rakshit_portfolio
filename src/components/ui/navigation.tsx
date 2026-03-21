@@ -16,6 +16,11 @@ export function Navigation() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isMac, setIsMac] = useState(true);
+
+  useEffect(() => {
+    setIsMac(navigator.platform?.toLowerCase().includes("mac") || navigator.userAgent?.toLowerCase().includes("mac"));
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -60,7 +65,7 @@ export function Navigation() {
             })}
             <div className="ml-3 pl-3 border-l border-[var(--color-border)]">
               <kbd className="text-xs font-mono text-[var(--color-text-dimmer)] px-2 py-1 rounded border border-[var(--color-border)] bg-[var(--color-bg-card)]">
-                ⌘K
+                {isMac ? "⌘" : "Ctrl+"}K
               </kbd>
               <span className="text-xs text-[var(--color-text-dimmer)] ml-2">Ask AI</span>
             </div>
