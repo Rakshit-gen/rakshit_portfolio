@@ -163,8 +163,8 @@ export function Hero() {
               <div className="flex flex-wrap gap-8 mt-16 pt-8 border-t border-[var(--color-border)]">
                 {[
                   { value: "3+", label: "Years building" },
-                  { value: "11", label: "Projects shipped" },
-                  { value: "6", label: "Open source PRs" },
+                  { value: "15", label: "Projects shipped" },
+                  { value: "25", label: "Open source PRs" },
                   { value: "Top 1%", label: "CodeChef" },
                 ].map((stat) => (
                   <div key={stat.label}>
