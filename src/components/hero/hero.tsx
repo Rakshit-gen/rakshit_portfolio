@@ -100,8 +100,10 @@ export function Hero() {
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
               {/* Profile image */}
-              <div className="mb-8">
-                <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-[var(--color-border)] ring-4 ring-[var(--color-accent)]/10">
+              <div className="mb-8 relative w-fit">
+                {/* Animated ring */}
+                <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[var(--color-accent)] via-[var(--color-accent-warm)] to-[var(--color-accent)] animate-spin-slow opacity-60 blur-[3px]" />
+                <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-[var(--color-bg)] ring-1 ring-[var(--color-accent)]/30">
                   <Image
                     src="/picofme.png"
                     alt="Rakshit Sisodiya"
@@ -110,6 +112,8 @@ export function Hero() {
                     priority
                   />
                 </div>
+                {/* Status dot */}
+                <div className="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-[var(--color-success)] border-2 border-[var(--color-bg)] animate-pulse" />
               </div>
 
               {/* Status badge */}
