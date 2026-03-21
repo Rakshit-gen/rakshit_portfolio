@@ -99,11 +99,26 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              {/* Profile image */}
-              <div className="mb-8 relative w-fit">
-                {/* Animated ring */}
-                <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[var(--color-accent)] via-[var(--color-accent-warm)] to-[var(--color-accent)] animate-spin-slow opacity-60 blur-[3px]" />
-                <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-[var(--color-bg)] ring-1 ring-[var(--color-accent)]/30">
+              {/* Profile image with 3D orbit rings */}
+              <div className="mb-8 relative w-fit hero-image-wrapper">
+                {/* Orbital rings */}
+                <div className="absolute inset-[-18px] rounded-full border border-[var(--color-accent)]/20 animate-orbit-1" />
+                <div className="absolute inset-[-30px] rounded-full border border-[var(--color-accent-warm)]/15 animate-orbit-2" />
+                <div className="absolute inset-[-42px] rounded-full border border-[var(--color-accent)]/10 animate-orbit-3" />
+
+                {/* Orbiting dots */}
+                <div className="absolute inset-[-18px] animate-orbit-1">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[var(--color-accent)] shadow-[0_0_8px_var(--color-accent)]" />
+                </div>
+                <div className="absolute inset-[-30px] animate-orbit-2">
+                  <div className="absolute bottom-0 right-0 w-1.5 h-1.5 rounded-full bg-[var(--color-accent-warm)] shadow-[0_0_6px_var(--color-accent-warm)]" />
+                </div>
+
+                {/* Glow behind image */}
+                <div className="absolute inset-[-4px] rounded-full bg-gradient-to-br from-[var(--color-accent)]/30 via-transparent to-[var(--color-accent-warm)]/30 blur-md" />
+
+                {/* Image */}
+                <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-[var(--color-bg)] hero-image-tilt">
                   <Image
                     src="/picofme.png"
                     alt="Rakshit Sisodiya"
@@ -112,8 +127,9 @@ export function Hero() {
                     priority
                   />
                 </div>
+
                 {/* Status dot */}
-                <div className="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-[var(--color-success)] border-2 border-[var(--color-bg)] animate-pulse" />
+                <div className="absolute bottom-0 right-0 z-10 w-4 h-4 rounded-full bg-[var(--color-success)] border-2 border-[var(--color-bg)] animate-pulse" />
               </div>
 
               {/* Status badge */}

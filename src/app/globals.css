@@ -78,11 +78,42 @@ body {
   font-family: var(--font-mono);
 }
 
-/* Slow spin for image ring */
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/* 3D orbit rings around profile image */
+@keyframes orbit-1 {
+  from { transform: rotateX(60deg) rotateZ(0deg); }
+  to { transform: rotateX(60deg) rotateZ(360deg); }
 }
-.animate-spin-slow {
-  animation: spin-slow 4s linear infinite;
+@keyframes orbit-2 {
+  from { transform: rotateX(75deg) rotateY(20deg) rotateZ(0deg); }
+  to { transform: rotateX(75deg) rotateY(20deg) rotateZ(-360deg); }
+}
+@keyframes orbit-3 {
+  from { transform: rotateX(50deg) rotateY(-15deg) rotateZ(0deg); }
+  to { transform: rotateX(50deg) rotateY(-15deg) rotateZ(360deg); }
+}
+
+.animate-orbit-1 {
+  animation: orbit-1 6s linear infinite;
+  transform-style: preserve-3d;
+}
+.animate-orbit-2 {
+  animation: orbit-2 8s linear infinite;
+  transform-style: preserve-3d;
+}
+.animate-orbit-3 {
+  animation: orbit-3 10s linear infinite;
+  transform-style: preserve-3d;
+}
+
+.hero-image-wrapper {
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+.hero-image-tilt {
+  transform: rotateY(-5deg) rotateX(5deg);
+  transition: transform 0.4s ease;
+}
+.hero-image-tilt:hover {
+  transform: rotateY(5deg) rotateX(-5deg) scale(1.05);
 }
