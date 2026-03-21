@@ -8,7 +8,10 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
 
 export const metadata: Metadata = {
-  title: "Rakshit Sisodiya | Full Stack Developer & AI Engineer",
+  title: {
+    default: "Rakshit Sisodiya | Full Stack Developer & AI Engineer",
+    template: "%s | Rakshit Sisodiya",
+  },
   description:
     "Full Stack Developer & AI Engineer building distributed systems, AI pipelines, and high-performance backends. Go, Python, TypeScript. LeetCode Top 6.5%, CodeChef 5★.",
   keywords: [
@@ -17,16 +20,39 @@ export const metadata: Metadata = {
     "LangChain", "AWS", "Kubernetes", "DeepSpeed", "Open Source",
   ],
   authors: [{ name: "Rakshit Sisodiya" }],
+  creator: "Rakshit Sisodiya",
+  metadataBase: new URL("https://rakshitsisodiya.xyz"),
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "Rakshit Sisodiya | Full Stack Developer & AI Engineer",
     description: "Building distributed systems, AI pipelines, and high-performance backends.",
     url: "https://rakshitsisodiya.xyz",
     siteName: "Rakshit Sisodiya",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Rakshit Sisodiya — Full Stack Developer & AI Engineer",
+      },
+    ],
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     creator: "@rakshit_sisodia",
+    title: "Rakshit Sisodiya | Full Stack Developer & AI Engineer",
+    description: "Building distributed systems, AI pipelines, and high-performance backends.",
+    images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
 };
