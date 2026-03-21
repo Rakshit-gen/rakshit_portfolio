@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0b;
+  --color-bg-card: #141416;
+  --color-bg-card-hover: #1a1a1e;
+  --color-bg-elevated: #1e1e22;
+  --color-accent: #00d4ff;
+  --color-accent-dim: #00d4ff33;
+  --color-accent-warm: #ffb347;
+  --color-text: #e8e8e8;
+  --color-text-dim: #888;
+  --color-text-dimmer: #555;
+  --color-border: #222;
+  --color-border-hover: #333;
+  --color-success: #22c55e;
+
+  --font-sans: "Geist", "Inter", system-ui, sans-serif;
+  --font-mono: "Geist Mono", "JetBrains Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-dimmer);
+}
+
+/* Page transition wrapper */
+.page-transition {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Glow effects */
+.glow-accent {
+  box-shadow: 0 0 20px var(--color-accent-dim);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-warm));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Mono text utility */
+.font-mono {
+  font-family: var(--font-mono);
+}
