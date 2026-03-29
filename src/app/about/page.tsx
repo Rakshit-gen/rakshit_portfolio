@@ -18,10 +18,20 @@ export default function AboutPage() {
     <div className="pt-20 sm:pt-24 pb-12 sm:pb-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="mb-14 sm:mb-20 flex flex-col md:flex-row gap-6 sm:gap-10 items-start">
-          <div className="relative shrink-0 w-fit">
-            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[var(--color-accent)] via-[var(--color-accent-warm)] to-[var(--color-accent)] opacity-40 blur-[4px]" />
-            <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-2xl overflow-hidden border-2 border-[var(--color-bg)]">
-              <Image src="/picofme.png" alt="Rakshit Sisodiya" fill className="object-cover" priority />
+          <div className="relative shrink-0">
+            {/* Terminal-style frame */}
+            <div className="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl overflow-hidden">
+              {/* Mini title bar */}
+              <div className="flex items-center gap-1.5 px-3 py-1.5 border-b border-[var(--color-border)]">
+                <div className="w-2 h-2 rounded-full bg-red-500/70" />
+                <div className="w-2 h-2 rounded-full bg-yellow-500/70" />
+                <div className="w-2 h-2 rounded-full bg-green-500/70" />
+                <span className="text-[9px] font-mono text-[var(--color-text-dimmer)] ml-1.5">rakshit.png</span>
+              </div>
+              {/* Image */}
+              <div className="relative w-28 h-28 md:w-36 md:h-36">
+                <Image src="/picofme.png" alt="Rakshit Sisodiya" fill className="object-cover" priority />
+              </div>
             </div>
           </div>
           <div>
