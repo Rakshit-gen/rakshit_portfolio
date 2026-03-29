@@ -32,7 +32,7 @@ export function FeaturedWork() {
             {featuredProjects.slice(0, 3).map((project, i) => (
               <motion.div key={project.slug} variants={fadeInUp}>
                 <Link href={`/work#${project.slug}`}>
-                  <div className="group relative bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-6 h-full hover:border-[var(--color-accent)]/30 hover:bg-[var(--color-bg-card-hover)] transition-all duration-300">
+                  <div className="group relative bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 h-full hover:border-[var(--color-accent)]/30 hover:bg-[var(--color-bg-card-hover)] transition-all duration-300 overflow-hidden">
                     {/* Project number */}
                     <span className="absolute top-4 right-4 text-xs font-mono text-[var(--color-text-dimmer)]">
                       {String(i + 1).padStart(2, "0")}
@@ -95,14 +95,14 @@ export function FeaturedWork() {
             {featuredProjects.slice(3, 5).map((project, i) => (
               <motion.div key={project.slug} variants={fadeInUp}>
                 <Link href={`/work#${project.slug}`}>
-                  <div className="group bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-6 hover:border-[var(--color-accent)]/30 hover:bg-[var(--color-bg-card-hover)] transition-all duration-300">
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
+                  <div className="group bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 hover:border-[var(--color-accent)]/30 hover:bg-[var(--color-bg-card-hover)] transition-all duration-300 overflow-hidden">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                      <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xs font-mono text-[var(--color-text-dimmer)]">
+                          <span className="text-xs font-mono text-[var(--color-text-dimmer)] shrink-0">
                             {String(i + 4).padStart(2, "0")}
                           </span>
-                          <div className="flex gap-1.5">
+                          <div className="flex flex-wrap gap-1.5">
                             {project.tags.slice(0, 2).map((tag) => (
                               <span
                                 key={tag}
@@ -113,12 +113,12 @@ export function FeaturedWork() {
                             ))}
                           </div>
                         </div>
-                        <h3 className="text-lg font-semibold mb-1 group-hover:text-[var(--color-accent)] transition-colors">
+                        <h3 className="text-lg font-semibold mb-1 group-hover:text-[var(--color-accent)] transition-colors truncate">
                           {project.name}
                         </h3>
-                        <p className="text-sm text-[var(--color-text-dim)]">{project.tagline}</p>
+                        <p className="text-sm text-[var(--color-text-dim)] line-clamp-2">{project.tagline}</p>
                       </div>
-                      <div className="flex flex-wrap gap-1.5 max-w-[200px] justify-end">
+                      <div className="flex flex-wrap gap-1.5 sm:max-w-[180px] sm:justify-end shrink-0">
                         {project.stack.slice(0, 3).map((tech) => (
                           <span
                             key={tech}

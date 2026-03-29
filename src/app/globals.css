@@ -9,8 +9,8 @@
   --color-accent-dim: #00d4ff33;
   --color-accent-warm: #ffb347;
   --color-text: #e8e8e8;
-  --color-text-dim: #888;
-  --color-text-dimmer: #555;
+  --color-text-dim: #aaa;
+  --color-text-dimmer: #777;
   --color-border: #222;
   --color-border-hover: #333;
   --color-success: #22c55e;
@@ -95,14 +95,23 @@ body {
 .animate-orbit-1 {
   animation: orbit-1 6s linear infinite;
   transform-style: preserve-3d;
+  will-change: transform;
+  backface-visibility: hidden;
+  contain: layout style;
 }
 .animate-orbit-2 {
   animation: orbit-2 8s linear infinite;
   transform-style: preserve-3d;
+  will-change: transform;
+  backface-visibility: hidden;
+  contain: layout style;
 }
 .animate-orbit-3 {
   animation: orbit-3 10s linear infinite;
   transform-style: preserve-3d;
+  will-change: transform;
+  backface-visibility: hidden;
+  contain: layout style;
 }
 
 /* Safe area for mobile bottom input */
@@ -113,12 +122,32 @@ body {
 .hero-image-wrapper {
   perspective: 800px;
   transform-style: preserve-3d;
+  contain: layout style;
 }
 
 .hero-image-tilt {
   transform: rotateY(-5deg) rotateX(5deg);
   transition: transform 0.4s ease;
+  will-change: transform;
 }
 .hero-image-tilt:hover {
   transform: rotateY(5deg) rotateX(-5deg) scale(1.05);
+}
+
+/* Contain layout reflows to sections */
+section {
+  contain: layout style;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateX(-4px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

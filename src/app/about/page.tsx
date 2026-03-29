@@ -6,6 +6,7 @@ const Education = dynamic(() => import("@/components/about/education").then((m) 
 const SkillsOrbit = dynamic(() => import("@/components/skills/skills-orbit").then((m) => m.SkillsOrbit));
 const OpenSource = dynamic(() => import("@/components/opensource/opensource").then((m) => m.OpenSource));
 const CompetitiveProgramming = dynamic(() => import("@/components/about/competitive-programming").then((m) => m.CompetitiveProgramming));
+const Testimonials = dynamic(() => import("@/components/about/testimonials").then((m) => m.Testimonials));
 
 export const metadata: Metadata = {
   title: "About | Rakshit Sisodiya",
@@ -51,6 +52,7 @@ export default function AboutPage() {
         <SkillsOrbit />
         <CompetitiveProgramming />
         <OpenSource />
+        <Testimonials />
       </div>
     </div>
   );

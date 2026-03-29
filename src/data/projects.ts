@@ -32,7 +32,6 @@ export const projects: Project[] = [
       { title: "Async Task Orchestration", points: ["Redis queues", "Job ID return pattern", "Celery workers", "FastAPI async"] },
       { title: "Vector Context Engine", points: ["RAG pipeline", "HuggingFace embeddings", "Qdrant vector DB", "LangChain integration"] },
       { title: "Multi-Agent Script Generation", points: ["Researcher + Writer agents", "GPT-4 backbone", "Custom agent orchestration"] },
-      { title: "Optimized Asset Delivery", points: ["S3 signed URLs", "CloudFront CDN", "Streaming responses"] },
     ],
     challenges: ["Long-running TTS (5-10 min)", "HTTP timeout management", "Multi-agent state coordination", "Vector search for context retrieval"],
   },

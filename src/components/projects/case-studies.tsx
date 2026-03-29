@@ -56,9 +56,22 @@ export function CaseStudies() {
               </div>
 
               {/* Architecture sections */}
-              <div className="grid md:grid-cols-2 gap-px bg-[var(--color-border)]">
-                {project.architecture?.map((section) => (
-                  <div key={section.title} className="bg-[var(--color-bg-card)] p-5">
+              <div className={`grid gap-px bg-[var(--color-border)] ${
+                project.architecture && project.architecture.length % 2 === 0
+                  ? "md:grid-cols-2"
+                  : project.architecture && project.architecture.length === 3
+                  ? "md:grid-cols-3"
+                  : "md:grid-cols-2"
+              }`}>
+                {project.architecture?.map((section, idx) => (
+                  <div
+                    key={section.title}
+                    className={`bg-[var(--color-bg-card)] p-5 ${
+                      project.architecture && project.architecture.length % 2 !== 0 && idx === project.architecture.length - 1 && project.architecture.length !== 3
+                        ? "md:col-span-2"
+                        : ""
+                    }`}
+                  >
                     <h4 className="text-sm font-semibold mb-3 flex items-center gap-2">
                       <span className="w-1 h-1 rounded-full bg-[var(--color-accent)]" />
                       {section.title}

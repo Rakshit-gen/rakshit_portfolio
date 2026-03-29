@@ -219,12 +219,9 @@ function TerminalContact() {
         onClick={() => inputRef.current?.focus()}
       >
         {lines.map((line, i) => (
-          <motion.div
+          <div
             key={`${i}-${line.text.slice(0, 20)}`}
-            initial={{ opacity: 0, x: -5 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.15, delay: line.type === "response" ? Math.min(i * 0.03, 0.3) : 0 }}
-            className={`whitespace-pre-wrap ${
+            className={`whitespace-pre-wrap animate-[fadeSlideIn_0.15s_ease-out] ${
               line.type === "user"
                 ? "text-[var(--color-accent)]"
                 : line.type === "response"
@@ -235,7 +232,7 @@ function TerminalContact() {
             {line.type === "user" && <span className="text-[var(--color-accent-warm)]">$ </span>}
             {line.type === "response" && <span className="text-[var(--color-success)]">  </span>}
             {line.text}
-          </motion.div>
+          </div>
         ))}
       </div>
 

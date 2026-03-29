@@ -3,17 +3,18 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/ui/navigation";
 import { AIWrapper } from "@/components/ai-assistant/ai-wrapper";
+import { PageTransition } from "@/components/ui/page-transition";
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
-const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
+const geist = Geist({ subsets: ["latin"], variable: "--font-geist", display: "swap" });
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono", display: "swap" });
 
 export const metadata: Metadata = {
   title: {
-    default: "Rakshit Sisodiya | Full Stack Developer & AI Engineer",
+    default: "Rakshit Sisodiya | Backend Engineer",
     template: "%s | Rakshit Sisodiya",
   },
   description:
-    "Full Stack Developer & AI Engineer building distributed systems, AI pipelines, and high-performance backends. Go, Python, TypeScript. LeetCode Top 6.5%, CodeChef 5★.",
+    "Backend Engineer building distributed systems, AI pipelines, and high-performance backends. Go, Python, TypeScript. LeetCode Top 6.5%, CodeChef 5★.",
   keywords: [
     "Rakshit Sisodiya", "Full Stack Developer", "AI Engineer", "Systems Architect",
     "NIT Hamirpur", "Go", "Python", "TypeScript", "Next.js", "Distributed Systems",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    title: "Rakshit Sisodiya | Full Stack Developer & AI Engineer",
+    title: "Rakshit Sisodiya | Backend Engineer",
     description: "Building distributed systems, AI pipelines, and high-performance backends.",
     url: "https://rakshitsisodiya.xyz",
     siteName: "Rakshit Sisodiya",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Rakshit Sisodiya — Full Stack Developer & AI Engineer",
+        alt: "Rakshit Sisodiya — Backend Engineer",
       },
     ],
     type: "website",
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     creator: "@rakshit_sisodia",
-    title: "Rakshit Sisodiya | Full Stack Developer & AI Engineer",
+    title: "Rakshit Sisodiya | Backend Engineer",
     description: "Building distributed systems, AI pipelines, and high-performance backends.",
     images: ["/og-image.png"],
   },
@@ -62,7 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${geist.variable} ${geistMono.variable}`}>
       <body className="antialiased">
         <Navigation />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen"><PageTransition>{children}</PageTransition></main>
         <AIWrapper />
       </body>
     </html>
