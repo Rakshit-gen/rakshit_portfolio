@@ -13,22 +13,22 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
+    name: "Chinmay Joshi",
+    role: "Engineering Manager at Google",
+    company: "Ex-Postman, Amazon",
+    text: "I was Rakshit's manager during his 6 month internship period at Wayground. Rakshit is a diligent, hardworking and sharp coder and has a good grasp of backend as well as frontend. He is a quick learner and is already as good as someone with a couple of years of work experience. Any team would be lucky to have him.",
+  },
+  {
+    name: "Rahul Kocheta",
+    role: "Software Engineer (IC-2) at ServiceNow",
+    company: "IIT (BHU) Varanasi",
+    text: "You're truly a hardworking and a passionate developer. You've been doing awesome on the self-learning projects that you've showcased me along the time. Your discipline and dedication to your goals will take you places. Best of Luck, keep hustling and the correct opportunity will soon arrive for you in no time!",
+  },
+  {
     name: "Open Source Community",
     role: "DeepSpeed Maintainers",
     company: "Microsoft Research",
     text: "Rakshit's PRs consistently addressed real production issues — deadlocks, NaN propagation, checkpoint crashes. Clean fixes with minimal surface area. The kind of contributor you want in your repo.",
-  },
-  {
-    name: "Team Feedback",
-    role: "Engineering Team",
-    company: "HSV Digital",
-    text: "Took ownership of the entire rubrics system from schema design to API rollout. The cold-start fix alone saved us from embarrassing demo failures. Doesn't just write code — actually thinks about what the system needs.",
-  },
-  {
-    name: "Peer Review",
-    role: "Engineering Team",
-    company: "Quizizz",
-    text: "Jumped into a Go codebase with millions of daily users and made meaningful performance improvements within weeks. The ElasticSearch optimization was something we'd been putting off for months.",
   },
 ];
 
