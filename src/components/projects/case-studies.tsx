@@ -26,14 +26,12 @@ export function CaseStudies() {
               className="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl overflow-hidden"
             >
               {/* Header */}
-              <div className="px-6 py-5 border-b border-[var(--color-border)]">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="flex items-center gap-3 mb-1">
-                      <h3 className="text-lg font-semibold">{project.name}</h3>
-                      <span className="text-xs font-mono text-[var(--color-accent)]">{project.tagline}</span>
-                    </div>
-                    <div className="flex gap-2 mt-2">
+              <div className="px-4 py-4 md:px-6 md:py-5 border-b border-[var(--color-border)]">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                  <div className="min-w-0">
+                    <h3 className="text-lg font-semibold">{project.name}</h3>
+                    <span className="text-xs font-mono text-[var(--color-accent)]">{project.tagline}</span>
+                    <div className="flex flex-wrap gap-1.5 mt-2">
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
@@ -48,7 +46,7 @@ export function CaseStudies() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-mono text-[var(--color-accent)] hover:underline"
+                    className="text-sm font-mono text-[var(--color-accent)] hover:underline shrink-0"
                   >
                     Live &rarr;
                   </a>
@@ -56,24 +54,18 @@ export function CaseStudies() {
               </div>
 
               {/* Architecture sections */}
-              <div className={`grid gap-px bg-[var(--color-border)] ${
-                project.architecture && project.architecture.length % 2 === 0
-                  ? "md:grid-cols-2"
-                  : project.architecture && project.architecture.length === 3
-                  ? "md:grid-cols-3"
-                  : "md:grid-cols-2"
-              }`}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[var(--color-border)]">
                 {project.architecture?.map((section, idx) => (
                   <div
                     key={section.title}
-                    className={`bg-[var(--color-bg-card)] p-5 ${
-                      project.architecture && project.architecture.length % 2 !== 0 && idx === project.architecture.length - 1 && project.architecture.length !== 3
+                    className={`bg-[var(--color-bg-card)] p-4 md:p-5 ${
+                      project.architecture && project.architecture.length % 2 !== 0 && idx === project.architecture.length - 1
                         ? "md:col-span-2"
                         : ""
                     }`}
                   >
                     <h4 className="text-sm font-semibold mb-3 flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-[var(--color-accent)]" />
+                      <span className="w-1 h-1 rounded-full bg-[var(--color-accent)] shrink-0" />
                       {section.title}
                     </h4>
                     <ul className="space-y-1.5">
@@ -90,11 +82,11 @@ export function CaseStudies() {
 
               {/* Challenges */}
               {project.challenges && (
-                <div className="px-6 py-4 border-t border-[var(--color-border)] bg-[var(--color-bg)]/50">
+                <div className="px-4 py-3 md:px-6 md:py-4 border-t border-[var(--color-border)] bg-[var(--color-bg)]/50">
                   <span className="text-[10px] font-mono text-[var(--color-text-dimmer)] uppercase tracking-wider">
                     Challenges solved:
                   </span>
-                  <div className="flex flex-wrap gap-2 mt-2">
+                  <div className="flex flex-wrap gap-1.5 mt-2">
                     {project.challenges.map((c) => (
                       <span
                         key={c}
