@@ -52,14 +52,11 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 pt-20 md:pt-0 overflow-hidden">
-      {/* Background grid */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
+      {/* Subtle grid overlay */}
+      <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: "linear-gradient(var(--color-accent) 1px, transparent 1px), linear-gradient(90deg, var(--color-accent) 1px, transparent 1px)",
         backgroundSize: "60px 60px",
       }} />
-
-      {/* Radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--color-accent)] opacity-[0.04] rounded-full blur-[120px]" />
 
       <div className="relative max-w-3xl w-full">
         {/* Boot sequence */}

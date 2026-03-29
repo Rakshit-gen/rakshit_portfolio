@@ -5,13 +5,17 @@ const Hero = dynamic(() => import("@/components/hero/hero").then((m) => m.Hero),
 });
 const FeaturedWork = dynamic(() => import("@/components/projects/featured-work").then((m) => m.FeaturedWork));
 const MetricsDashboard = dynamic(() => import("@/components/metrics/metrics-dashboard").then((m) => m.MetricsDashboard));
+const HomepageBg = dynamic(() => import("@/components/ui/homepage-bg").then((m) => m.HomepageBg));
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <FeaturedWork />
-      <MetricsDashboard />
+      <HomepageBg />
+      <div className="relative z-10">
+        <Hero />
+        <FeaturedWork />
+        <MetricsDashboard />
+      </div>
     </>
   );
 }
