@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 
+const ExperienceTimeline = dynamic(() => import("@/components/experience/experience-timeline").then((m) => m.ExperienceTimeline));
 const ProjectsGrid = dynamic(() => import("@/components/projects/projects-grid").then((m) => m.ProjectsGrid));
 const CaseStudies = dynamic(() => import("@/components/projects/case-studies").then((m) => m.CaseStudies));
 
@@ -20,6 +21,7 @@ export default function WorkPage() {
             Systems I&apos;ve designed and built — from distributed API gateways to multi-agent AI pipelines.
           </p>
         </div>
+        <ExperienceTimeline />
         <ProjectsGrid />
         <CaseStudies />
       </div>

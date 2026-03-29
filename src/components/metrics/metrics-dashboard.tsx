@@ -69,9 +69,9 @@ export function MetricsDashboard() {
           variants={staggerContainer}
         >
           <motion.div variants={fadeInUp} className="mb-12">
-            <p className="text-xs font-mono text-[var(--color-accent)] mb-2">// real-world impact</p>
-            <h2 className="text-3xl md:text-4xl font-bold">Performance Metrics</h2>
-            <p className="text-[var(--color-text-dim)] mt-2 text-sm">Measured improvements from production systems</p>
+            <p className="text-xs font-mono text-[var(--color-accent)] mb-2">// numbers that kept me employed</p>
+            <h2 className="text-3xl md:text-4xl font-bold">Things I Actually Improved</h2>
+            <p className="text-[var(--color-text-dim)] mt-2 text-sm">Real numbers from real servers that real people depend on</p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

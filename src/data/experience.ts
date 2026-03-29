@@ -11,22 +11,22 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     company: "HSV Digital",
-    role: "AI Backend Engineer",
+    role: "Backend Engineer",
     period: "Dec 2025 — Present",
-    location: "Gurugram, Haryana",
+    location: "Remote",
     description:
-      "Built scalable LLM inference APIs powering an AI-driven interview platform used by 500+ recruiters. Migrated legacy evaluation system to a rubric-first approach, improving assessment consistency by 40%.",
-    skills: ["Nest.js", "Python", "AWS", "ElevenLabs", "CI/CD"],
+      "Built a multi-tenant Rubrics System end-to-end with tenant-isolated access control. Reduced NestJS API cold-start from ~45s to ~3s (93%). Implemented multi-level manager hierarchy and role system. Shipped 6+ analytics BFF endpoints replacing ad-hoc frontend data transformations.",
+    skills: ["TypeScript", "Node.js", "NestJS", "AWS", "PostgreSQL", "Redis"],
     current: true,
   },
   {
-    company: "Wayground",
+    company: "Quizizz (Wayground)",
     role: "Software Engineer",
-    period: "Aug 2024 — Nov 2024",
+    period: "Jan 2025 — Oct 2025",
     location: "Bengaluru, Karnataka",
     description:
-      "Built scalable backends, optimized APIs, and contributed to frontend features. Streamlined deployments with cloud and CI/CD.",
-    skills: ["Go", "TypeScript", "AWS", "PostgreSQL"],
+      "Engineered Go/Python microservices improving quiz throughput 42% for 1M+ daily quizzes via Redis async pipelining. Optimized ElasticSearch over 10M+ records cutting p95 latency to <280ms (78% reduction). Deployed 25+ containerized services on AWS EKS with multi-tier Redis caching reducing DB load 85%.",
+    skills: ["Go", "Python", "Vue.js", "GraphQL", "AWS", "ElasticSearch"],
   },
   {
     company: "Mood Analytica",

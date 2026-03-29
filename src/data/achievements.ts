@@ -1,15 +1,16 @@
 export const competitiveProgramming = [
   { platform: "LeetCode", rating: "1828", highlight: "Top 6.5% globally", detail: "380+ problems solved" },
   { platform: "CodeChef", rating: "5★", highlight: "Top 1% globally", detail: "150+ challenges completed" },
+  { platform: "GATE 2026", rating: "Qualified", highlight: "Computer Science & IT", detail: "Graduate Aptitude Test in Engineering" },
 ];
 
 export const impactMetrics = [
-  { label: "Cold Start", value: "93%", description: "NestJS API cold-start reduced from 45s to 3s" },
-  { label: "Throughput", value: "42%", description: "quiz throughput boost via Redis async pipelining" },
-  { label: "Search Latency", value: "78%", description: "p95 cut to <280ms on 10M+ records (ElasticSearch)" },
-  { label: "DB Load", value: "85%", description: "reduction via multi-tier Redis caching (L1/L2)" },
-  { label: "RAM Usage", value: "85%", description: "1.2GB → 180MB via Redis pooling & chunked streaming" },
-  { label: "Gateway", value: "10K", description: "req/min with 99.99% uptime under burst traffic" },
+  { label: "Cold Start", value: "93%", description: "API boot went from 45s to 3s — yes, 45 seconds was real" },
+  { label: "Throughput", value: "42%", description: "Quiz serving got faster with Redis. Users didn't notice. That's the point." },
+  { label: "Search Latency", value: "78%", description: "Search over 10M+ records now under 280ms. Was painful before." },
+  { label: "DB Load", value: "85%", description: "Added caching layers so the database could finally breathe" },
+  { label: "RAM Usage", value: "85%", description: "1.2GB → 180MB. The server stopped sweating." },
+  { label: "Gateway", value: "10K", description: "req/min and it stays up. That's the whole job." },
 ];
 
 export const openSourceContributions = [

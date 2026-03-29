@@ -7,13 +7,14 @@ import Link from "next/link";
 
 const bootLines = [
   { prefix: "init", text: "loading rakshit.sys...", delay: 0 },
-  { prefix: "auth", text: "NIT Hamirpur → HSV Digital", delay: 400 },
-  { prefix: "oss", text: "5 PRs merged @ Microsoft DeepSpeed", delay: 800 },
-  { prefix: "rank", text: "LeetCode 1828 · CodeChef 5★", delay: 1200 },
-  { prefix: "ready", text: "system online", delay: 1600 },
+  { prefix: "edu", text: "NIT Hamirpur → survived 4 years", delay: 400 },
+  { prefix: "work", text: "currently breaking things @ HSV Digital", delay: 800 },
+  { prefix: "oss", text: "5 PRs merged @ Microsoft DeepSpeed (they let me in somehow)", delay: 1200 },
+  { prefix: "gate", text: "GATE 2026 cleared — CS & IT", delay: 1600 },
+  { prefix: "ready", text: "system online. probably.", delay: 2000 },
 ];
 
-const roles = ["Full Stack Engineer", "AI Engineer", "Systems Architect", "Open Source Contributor"];
+const roles = ["Backend Engineer", "Systems Architect", "Open Source Contributor"];
 
 export function Hero() {
   const alreadyBooted = typeof window !== "undefined" && sessionStorage.getItem("booted") === "1";
@@ -136,7 +137,7 @@ export function Hero() {
               <div className="flex items-center gap-2 mb-6">
                 <span className="w-2 h-2 rounded-full bg-[var(--color-success)] animate-pulse" />
                 <span className="text-xs font-mono text-[var(--color-text-dim)]">
-                  Currently building @ HSV Digital
+                  Writing code that mostly works @ HSV Digital
                 </span>
               </div>
 
@@ -164,8 +165,8 @@ export function Hero() {
 
               {/* Description */}
               <p className="text-[var(--color-text-dim)] text-lg max-w-xl mb-10 leading-relaxed">
-                I build distributed systems, AI pipelines, and high-performance backends.
-                Obsessed with architecture that scales and code that lasts.
+                I write Go and TypeScript until things stop crashing.
+                Occasionally they even work in production.
               </p>
 
               {/* CTAs */}
@@ -190,7 +191,7 @@ export function Hero() {
                   { value: "3+", label: "Years building" },
                   { value: "15", label: "Projects shipped" },
                   { value: "25", label: "Open source PRs" },
-                  { value: "Top 1%", label: "CodeChef" },
+                  { value: "GATE", label: "2026 Qualified" },
                 ].map((stat) => (
                   <div key={stat.label}>
                     <div className="text-2xl font-bold text-white">{stat.value}</div>

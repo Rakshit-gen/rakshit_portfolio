@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import type { Metadata } from "next";
 
-const ExperienceTimeline = dynamic(() => import("@/components/experience/experience-timeline").then((m) => m.ExperienceTimeline));
+const Education = dynamic(() => import("@/components/about/education").then((m) => m.Education));
 const SkillsOrbit = dynamic(() => import("@/components/skills/skills-orbit").then((m) => m.SkillsOrbit));
 const OpenSource = dynamic(() => import("@/components/opensource/opensource").then((m) => m.OpenSource));
 const CompetitiveProgramming = dynamic(() => import("@/components/about/competitive-programming").then((m) => m.CompetitiveProgramming));
@@ -28,14 +28,15 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About Me</h1>
           <div className="max-w-2xl space-y-4 text-[var(--color-text-dim)] leading-relaxed">
             <p>
-              I&apos;m a Full Stack Developer & AI Engineer based in India, currently building
-              LLM inference APIs at <span className="text-white font-medium">HSV Digital</span>.
-              I graduated from <span className="text-white font-medium">NIT Hamirpur</span>.
+              I&apos;m a Backend Engineer based in India, currently building
+              scalable systems at <span className="text-white font-medium">HSV Digital</span>.
+              I graduated from <span className="text-white font-medium">NIT Hamirpur</span> and
+              cleared <span className="text-white font-medium">GATE 2026</span> in Computer Science.
             </p>
             <p>
-              I specialize in distributed systems, AI pipelines, and high-performance backends.
-              My work spans from building real-time collaboration engines with Go and WebSockets
-              to designing multi-agent AI systems with LangChain and custom orchestration layers.
+              I specialize in distributed systems and high-performance backends.
+              My work spans from engineering Go/Python microservices handling millions of daily requests
+              to building multi-tenant platforms with complex authorization systems.
             </p>
             <p>
               Outside of work, I contribute to open source — including{" "}
@@ -46,7 +47,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <ExperienceTimeline />
+        <Education />
         <SkillsOrbit />
         <CompetitiveProgramming />
         <OpenSource />

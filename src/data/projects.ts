@@ -22,7 +22,7 @@ export const projects: Project[] = [
     name: "NervaAI",
     tagline: "AI-Driven Podcast Generation",
     description:
-      "Event-driven pipeline processing long-form audio into synthesized podcasts. Fault-tolerant architecture handling high-concurrency workloads with async task orchestration, vector context engine, and multi-agent script generation.",
+      "Feed it any topic, get back a podcast with two AI hosts who actually sound like they care. Handles the research, script writing, and voice synthesis — you just hit play.",
     stack: ["FastAPI", "Qdrant", "Redis", "AWS", "Next.js", "PostgreSQL", "HuggingFace"],
     link: "https://nervaai.vercel.app/",
     featured: true,
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     name: "OpenSkill",
     tagline: "AI-Powered Claude Skill Orchestrator",
     description:
-      "CLI tool for creating and managing Claude skills with AI-powered content generation. Modular LLM provider system supporting Groq, OpenAI, Anthropic, and Ollama with local state versioning.",
+      "CLI tool that lets you create and manage Claude skills without copy-pasting markdown files like it's 2005. Works with Groq, OpenAI, Anthropic, and Ollama.",
     stack: ["Go", "Next.js", "Tailwind", "TypeScript"],
     link: "https://www.openskill.online/",
     featured: true,
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     name: "VentaEdge",
     tagline: "Distributed API Gateway",
     description:
-      "Enterprise-grade distributed API gateway with intelligent load balancing, Redis caching, real-time analytics dashboard, and advanced rate limiting using token bucket + Redis + Lua.",
+      "API gateway in Go that handles load balancing, rate limiting, and caching. Basically a bouncer for your backend — decides who gets in and how fast.",
     stack: ["Go", "Redis", "PostgreSQL", "Next.js", "TypeScript", "Docker"],
     link: "https://vantageedge.vercel.app/",
     featured: true,
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     name: "SyncLayer",
     tagline: "Real-Time Collaboration Engine",
     description:
-      "Real-time collaborative task management platform (Trello/Notion-inspired) built with Go Fiber, WebSockets, Redis Pub/Sub, and optimistic UI with write batching.",
+      "Trello-ish task board where changes show up instantly for everyone. Built with Go, WebSockets, and Redis — because polling is a crime.",
     stack: ["Go", "Redis", "PostgreSQL", "Next.js", "TypeScript"],
     link: "https://sync-layer.vercel.app/teams",
     featured: true,
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     name: "SentralQ",
     tagline: "Multi-Agent AI Debugging",
     description:
-      "AI-powered API debugging platform with multi-agent systems for auto-diagnosing failures and delivering actionable real-time solutions via supervisor + specialist agent architecture.",
+      "Paste your broken API logs, get back what went wrong and how to fix it. Multiple AI agents argue about the diagnosis so you don't have to.",
     stack: ["Python", "FastAPI", "Next.js", "TypeScript", "Tailwind", "Docker"],
     link: "https://api-analyse-fe.vercel.app/",
     featured: true,

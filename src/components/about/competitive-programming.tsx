@@ -31,18 +31,22 @@ export function CompetitiveProgramming() {
               </div>
 
               {/* Progress bar visual */}
-              <div className="mt-4 h-1 bg-[var(--color-bg-elevated)] rounded-full overflow-hidden">
-                <motion.div
-                  className="h-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-warm)] rounded-full"
-                  initial={{ width: 0 }}
-                  whileInView={{ width: cp.platform === "CodeChef" ? "99%" : "93.5%" }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-                />
-              </div>
-              <p className="text-[10px] font-mono text-[var(--color-text-dimmer)] mt-1 text-right">
-                {cp.platform === "CodeChef" ? "Top 1%" : "Top 6.5%"} percentile
-              </p>
+              {cp.platform !== "GATE 2026" && (
+                <>
+                  <div className="mt-4 h-1 bg-[var(--color-bg-elevated)] rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-warm)] rounded-full"
+                      initial={{ width: 0 }}
+                      whileInView={{ width: cp.platform === "CodeChef" ? "99%" : "93.5%" }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+                    />
+                  </div>
+                  <p className="text-[10px] font-mono text-[var(--color-text-dimmer)] mt-1 text-right">
+                    {cp.platform === "CodeChef" ? "Top 1%" : "Top 6.5%"} percentile
+                  </p>
+                </>
+              )}
             </motion.div>
           ))}
         </div>

@@ -17,7 +17,7 @@ export function FeaturedWork() {
         >
           <motion.div variants={fadeInUp} className="flex items-center justify-between mb-12">
             <div>
-              <p className="text-xs font-mono text-[var(--color-accent)] mb-2">// featured projects</p>
+              <p className="text-xs font-mono text-[var(--color-accent)] mb-2">// stuff I actually shipped</p>
               <h2 className="text-3xl md:text-4xl font-bold">Selected Work</h2>
             </div>
             <Link
