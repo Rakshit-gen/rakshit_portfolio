@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 
 export default function WorkPage() {
   return (
-    <div className="pt-24 pb-16">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="mb-16">
+    <div className="pt-20 sm:pt-24 pb-12 sm:pb-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="mb-10 sm:mb-16">
           <p className="text-xs font-mono text-[var(--color-accent)] mb-2">// projects</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Work</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Work</h1>
           <p className="text-[var(--color-text-dim)] max-w-xl">
             Systems I&apos;ve designed and built — from distributed API gateways to multi-agent AI pipelines.
           </p>

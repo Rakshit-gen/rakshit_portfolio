@@ -59,7 +59,7 @@ export function MetricsDashboard() {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section className="py-24 px-6 border-t border-[var(--color-border)]">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 border-t border-[var(--color-border)]">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -70,28 +70,28 @@ export function MetricsDashboard() {
         >
           <motion.div variants={fadeInUp} className="mb-12">
             <p className="text-xs font-mono text-[var(--color-accent)] mb-2">// numbers that kept me employed</p>
-            <h2 className="text-3xl md:text-4xl font-bold">Things I Actually Improved</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Things I Actually Improved</h2>
             <p className="text-[var(--color-text-dim)] mt-2 text-sm">Real numbers from real servers that real people depend on</p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
             {impactMetrics.map((metric) => (
               <motion.div
                 key={metric.label}
                 variants={fadeInUp}
-                className="relative bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-6 overflow-hidden group hover:border-[var(--color-accent)]/20 transition-colors"
+                className="relative bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-4 sm:p-6 overflow-hidden group hover:border-[var(--color-accent)]/20 transition-colors"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-accent)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
                 <div className="relative">
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-success)]" />
                     <span className="text-[10px] font-mono text-[var(--color-text-dimmer)] uppercase tracking-wider">
                       {metric.label}
                     </span>
                   </div>
 
-                  <div className="text-3xl md:text-4xl font-bold text-white font-mono mb-2">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white font-mono mb-2">
                     <AnimatedValue value={metric.value} inView={inView} />
                   </div>
 

@@ -26,7 +26,7 @@ export function Education() {
             <motion.div
               key={edu.institution}
               variants={fadeInUp}
-              className="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-6 hover:border-[var(--color-border-hover)] transition-colors"
+              className="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-4 sm:p-6 hover:border-[var(--color-border-hover)] transition-colors"
             >
               <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
                 <div>

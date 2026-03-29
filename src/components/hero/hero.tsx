@@ -142,7 +142,7 @@ export function Hero() {
               </div>
 
               {/* Name */}
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4">
+              <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-4">
                 Rakshit
                 <span className="text-gradient"> Sisodiya</span>
               </h1>
@@ -164,7 +164,7 @@ export function Hero() {
               </div>
 
               {/* Description */}
-              <p className="text-[var(--color-text-dim)] text-lg max-w-xl mb-10 leading-relaxed">
+              <p className="text-[var(--color-text-dim)] text-base sm:text-lg max-w-xl mb-8 sm:mb-10 leading-relaxed">
                 I write Go and TypeScript until things stop crashing.
                 Occasionally they even work in production.
               </p>
@@ -186,7 +186,7 @@ export function Hero() {
               </div>
 
               {/* Quick stats */}
-              <div className="flex flex-wrap gap-8 mt-16 pt-8 border-t border-[var(--color-border)]">
+              <div className="flex flex-wrap gap-5 sm:gap-8 mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-[var(--color-border)]">
                 {[
                   { value: "3+", label: "Years building" },
                   { value: "15", label: "Projects shipped" },

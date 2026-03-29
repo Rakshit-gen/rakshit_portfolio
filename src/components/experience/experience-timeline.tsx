@@ -19,7 +19,7 @@ export function ExperienceTimeline() {
 
           <div className="space-y-8">
             {experiences.map((exp) => (
-              <motion.div key={exp.company} variants={fadeInUp} className="relative pl-10">
+              <motion.div key={exp.company} variants={fadeInUp} className="relative pl-8 sm:pl-10">
                 {/* Timeline dot */}
                 <div className="absolute left-0 top-2">
                   <div className={`w-[23px] h-[23px] rounded-full border-2 flex items-center justify-center ${
@@ -33,7 +33,7 @@ export function ExperienceTimeline() {
                   </div>
                 </div>
 
-                <div className="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 hover:border-[var(--color-border-hover)] transition-colors">
+                <div className="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-4 sm:p-5 hover:border-[var(--color-border-hover)] transition-colors">
                   <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                     <div>
                       <h3 className="font-semibold text-white">{exp.company}</h3>

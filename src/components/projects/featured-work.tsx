@@ -7,7 +7,7 @@ import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 export function FeaturedWork() {
   return (
-    <section className="py-24 px-6">
+    <section className="py-16 sm:py-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial="hidden"
@@ -18,7 +18,7 @@ export function FeaturedWork() {
           <motion.div variants={fadeInUp} className="flex items-center justify-between mb-12">
             <div>
               <p className="text-xs font-mono text-[var(--color-accent)] mb-2">// stuff I actually shipped</p>
-              <h2 className="text-3xl md:text-4xl font-bold">Selected Work</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Selected Work</h2>
             </div>
             <Link
               href="/work"

@@ -18,7 +18,7 @@ export function CompetitiveProgramming() {
             <motion.div
               key={cp.platform}
               variants={fadeInUp}
-              className="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-6 hover:border-[var(--color-accent)]/20 transition-colors"
+              className="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-4 sm:p-6 hover:border-[var(--color-accent)]/20 transition-colors"
             >
               <div className="flex items-center justify-between mb-4">
                 <h3 className="font-semibold text-white">{cp.platform}</h3>

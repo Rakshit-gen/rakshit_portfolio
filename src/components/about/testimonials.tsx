@@ -46,7 +46,7 @@ export function Testimonials() {
         <motion.div variants={fadeInUp}>
           <div className="relative bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl p-5 md:p-8">
             {/* Quote mark */}
-            <div className="absolute top-4 right-6 text-6xl font-serif text-[var(--color-accent)]/10 select-none leading-none">
+            <div className="absolute top-3 right-4 sm:top-4 sm:right-6 text-4xl sm:text-6xl font-serif text-[var(--color-accent)]/10 select-none leading-none">
               &ldquo;
             </div>
 

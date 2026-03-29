@@ -40,7 +40,7 @@ export function Navigation() {
           scrolled ? "bg-[#0a0a0b]/80 backdrop-blur-xl border-b border-[#222]" : "bg-transparent"
         )}
       >
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
           <Link href="/" className="font-mono text-sm text-[var(--color-accent)] hover:opacity-80 transition-opacity">
             rakshit.sys
           </Link>
@@ -88,7 +88,7 @@ export function Navigation() {
       </nav>
 
       {mobileOpen && (
-        <div className="fixed inset-x-0 top-16 z-40 bg-[#0a0a0b]/95 backdrop-blur-xl border-b border-[var(--color-border)] md:hidden">
+        <div className="fixed inset-x-0 top-14 sm:top-16 z-40 bg-[#0a0a0b]/95 backdrop-blur-xl border-b border-[var(--color-border)] md:hidden">
           <div className="px-6 py-4 flex flex-col gap-2">
             {links.map((link) => {
               const active = pathname === link.href;

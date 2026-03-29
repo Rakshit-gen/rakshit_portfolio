@@ -13,15 +13,15 @@ const socials = [
 const commands: Record<string, { output: string[]; action?: () => void }> = {
   help: {
     output: [
-      "Available commands:",
+      "Commands:",
       "",
-      "  whois rakshit  — who is this guy anyway",
-      "  ls projects    — things I've built",
-      "  cat resume     — opens my resume",
-      "  ping           — am I alive?",
-      "  mail <message> — send me an email",
-      "  clear          — clean up this mess",
-      "  help           — you're looking at it",
+      "whois rakshit — about me",
+      "ls projects   — my work",
+      "cat resume    — open resume",
+      "ping          — am I alive?",
+      "mail <msg>    — email me",
+      "clear         — clean up",
+      "help          — this list",
     ],
   },
   "whois rakshit": {
@@ -36,13 +36,13 @@ const commands: Record<string, { output: string[]; action?: () => void }> = {
   },
   "ls projects": {
     output: [
-      "drwxr-xr-x  NervaAI      — AI podcast generator. Feed it a topic, get a show.",
-      "drwxr-xr-x  OpenSkill    — CLI for managing Claude skills. No more markdown wrangling.",
-      "drwxr-xr-x  VentaEdge    — API gateway in Go. Bouncer for your backend.",
-      "drwxr-xr-x  SyncLayer    — Real-time collab board. Polling is a crime.",
-      "drwxr-xr-x  SentralQ     — AI API debugger. Agents argue so you don't have to.",
+      "NervaAI    — AI podcast generator",
+      "OpenSkill  — Claude skill manager CLI",
+      "VentaEdge  — API gateway in Go",
+      "SyncLayer  — Real-time collab board",
+      "SentralQ   — AI API debugger",
       "",
-      "Run 'cd /work' for the full list → rakshit.dev/work",
+      "→ /work for the full list",
     ],
   },
   "cat resume": {
@@ -203,25 +203,25 @@ function TerminalContact() {
       className="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-xl overflow-hidden"
     >
       {/* Terminal header */}
-      <div className="flex items-center gap-2 px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-bg)]/50">
+      <div className="flex items-center gap-2 px-3 py-2.5 md:px-4 md:py-3 border-b border-[var(--color-border)] bg-[var(--color-bg)]/50">
         <div className="flex gap-1.5">
-          <div className="w-3 h-3 rounded-full bg-red-500/80" />
-          <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-          <div className="w-3 h-3 rounded-full bg-green-500/80" />
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-red-500/80" />
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-yellow-500/80" />
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-green-500/80" />
         </div>
-        <span className="text-xs font-mono text-[var(--color-text-dimmer)] ml-2">contact@rakshit ~ zsh</span>
+        <span className="text-[10px] md:text-xs font-mono text-[var(--color-text-dimmer)] ml-2 truncate">contact@rakshit ~ zsh</span>
       </div>
 
       {/* Terminal body */}
       <div
         ref={terminalRef}
-        className="p-4 font-mono text-sm max-h-[300px] overflow-y-auto space-y-1 cursor-text"
+        className="p-3 md:p-4 font-mono text-xs md:text-sm max-h-[220px] md:max-h-[300px] overflow-y-auto space-y-1 cursor-text overflow-x-hidden"
         onClick={() => inputRef.current?.focus()}
       >
         {lines.map((line, i) => (
           <div
             key={`${i}-${line.text.slice(0, 20)}`}
-            className={`whitespace-pre-wrap animate-[fadeSlideIn_0.15s_ease-out] ${
+            className={`break-words animate-[fadeSlideIn_0.15s_ease-out] ${
               line.type === "user"
                 ? "text-[var(--color-accent)]"
                 : line.type === "response"
@@ -237,8 +237,8 @@ function TerminalContact() {
       </div>
 
       {/* Quick command buttons */}
-      <div className="px-4 pb-3">
-        <div className="flex flex-wrap gap-2 mb-3">
+      <div className="px-3 pb-3 md:px-4">
+        <div className="flex flex-wrap gap-1.5 md:gap-2 mb-3">
           {quickCmds.map((qc) => (
             <button
               key={qc.cmd}
@@ -246,7 +246,7 @@ function TerminalContact() {
                 processCommand(qc.cmd);
                 setHistory((prev) => [qc.cmd, ...prev]);
               }}
-              className="text-xs px-3 py-1.5 rounded-full border border-[var(--color-border)] text-[var(--color-text-dimmer)] hover:border-[var(--color-accent)]/40 hover:text-[var(--color-accent)] transition-all duration-200 font-mono"
+              className="text-[10px] md:text-xs px-2.5 py-1 md:px-3 md:py-1.5 rounded-full border border-[var(--color-border)] text-[var(--color-text-dimmer)] hover:border-[var(--color-accent)]/40 hover:text-[var(--color-accent)] transition-all duration-200 font-mono"
             >
               {qc.label}
             </button>
@@ -254,22 +254,22 @@ function TerminalContact() {
         </div>
 
         {/* Input */}
-        <div className="flex items-center gap-2 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-lg px-3 py-2 focus-within:border-[var(--color-accent)]/50 transition-colors">
-          <span className="text-[var(--color-accent)] text-sm font-mono">$</span>
+        <div className="flex items-center gap-2 bg-[var(--color-bg)] border border-[var(--color-border)] rounded-lg px-2.5 py-1.5 md:px-3 md:py-2 focus-within:border-[var(--color-accent)]/50 transition-colors">
+          <span className="text-[var(--color-accent)] text-xs md:text-sm font-mono">$</span>
           <input
             ref={inputRef}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="try 'help' or type a command..."
-            className="flex-1 bg-transparent text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-dimmer)] outline-none font-mono"
+            placeholder="type a command..."
+            className="flex-1 bg-transparent text-xs md:text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-dimmer)] outline-none font-mono min-w-0"
             autoComplete="off"
             spellCheck={false}
           />
           <button
             onClick={handleSubmit}
             disabled={!input.trim()}
-            className="text-xs font-mono px-3 py-1 rounded bg-[var(--color-accent)] text-[var(--color-bg)] disabled:opacity-30 hover:opacity-90 transition-opacity"
+            className="text-[10px] md:text-xs font-mono px-2.5 py-1 md:px-3 rounded bg-[var(--color-accent)] text-[var(--color-bg)] disabled:opacity-30 hover:opacity-90 transition-opacity shrink-0"
           >
             run
           </button>
@@ -378,18 +378,18 @@ function CopyEmail() {
 
 export function ContactSection() {
   return (
-    <div className="max-w-6xl mx-auto px-6">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="mb-16"
       >
         <p className="text-xs font-mono text-[var(--color-accent)] mb-2">// contact</p>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
           Let&apos;s Build Something
           <span className="text-gradient"> Together</span>
         </h1>
-        <p className="text-[var(--color-text-dim)] max-w-xl text-lg">
+        <p className="text-[var(--color-text-dim)] max-w-xl text-base sm:text-lg">
           Open to opportunities and collaboration. Whether it&apos;s a distributed system,
           an API gateway, or something entirely new — let&apos;s talk.
         </p>
