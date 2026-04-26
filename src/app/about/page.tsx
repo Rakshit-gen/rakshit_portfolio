@@ -30,7 +30,7 @@ export default function AboutPage() {
               </div>
               {/* Image */}
               <div className="relative w-28 h-28 md:w-36 md:h-36">
-                <Image src="/picofme.png" alt="Rakshit Sisodiya" fill className="object-cover" priority />
+                <Image src="/Mypic.jpeg" alt="Rakshit Sisodiya" fill className="object-cover" priority />
               </div>
             </div>
           </div>

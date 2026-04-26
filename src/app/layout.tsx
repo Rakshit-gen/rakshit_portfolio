@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://rakshitsisodiya.xyz"),
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/Mypic.ico", sizes: "32x32" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Rakshit Sisodiya",
     images: [
       {
-        url: "/og-image.png",
+        url: "/Mypic.jpeg",
         width: 1200,
         height: 630,
         alt: "Rakshit Sisodiya — Backend Engineer",

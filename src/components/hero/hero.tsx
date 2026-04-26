@@ -118,7 +118,7 @@ export function Hero() {
                 {/* Image */}
                 <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-[var(--color-bg)] hero-image-tilt">
                   <Image
-                    src="/picofme.png"
+                    src="/Mypic.jpeg"
                     alt="Rakshit Sisodiya"
                     fill
                     className="object-cover"
